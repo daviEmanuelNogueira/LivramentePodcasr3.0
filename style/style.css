@@ -6,26 +6,28 @@ body {
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.85);
     font-family: 'Montserrat', sans-serif;
-}
+    height: 100vh;
+  }
 
+/* Container
+***************************/
 .container {
-    width: 950px;
+    display:flex;
+    flex-direction: column;
+    width: 850px;
     margin: 0 auto;
-}
+  }
 
 /* Cabecalho
-**************************************/
-header {
-    border-bottom: 1px solid #01CC7A;
-
-}
+****************************/
 
 .cabecalho {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5px; 
+    margin-top: 5px;
+    border-bottom: 1px solid #01CC7A;
 }
 
 .logo3 {
@@ -39,20 +41,16 @@ header {
     height: 108px;
 }
 
-/* Player
+/* Conteudo
 ******************************/
-.player {
+main {
     display: flex;
-    justify-content: center;
-    margin: 60px auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 5px 5px 5px;
+    padding: 5px;
 }
-
-/* Navegação
-*******************************/
-nav {
-    display: flex;
-    justify-content: center;
-}
+  
 ul {
     display: flex;
     flex-direction: column;
@@ -62,7 +60,7 @@ ul {
 
 ul li {
     display: flex;
-    align-items: center;   
+    align-items: center;  
 }
 
 ul a{
@@ -81,53 +79,93 @@ ul a img {
     height: 36px;
     width: 36px;
     margin-left: 5px;
-
 }
 
 ul li a:hover {
     box-shadow: 0 0 30px #01CC7A;
 }
 
-/* Texto
-****************************/
 
-main {
-    margin: 15px;
-    padding: 5px;
-}
 main p {
     color: #FFFFFF;
-    text-align: center;
-    
+    text-align: center;   
 }
 
-/* Rodapé
-****************************/
+/* Footer
+***************************/
 footer {
-    padding: 1px;
-    background-color: #000;
+    background: #000;
 }
 
 footer p {
-    margin: 0 auto;
-    text-align: center;
-    padding: 5px;
-    font-size: 14px;
-    color: #FFFFFF;
+   margin: 0 auto;
+   text-align: center;
+   padding: 5px;
+   font-size: 14px;
+   color: #FFFFFF;
 }
 
-/* Responsividade
-**************************/
+footer a {
+    text-decoration: none;
+    color: #01CC7A
+}
+
+/*Mobile 600px
+***************************/
+
 @media (max-width: 600px) {
+
+body {
+    height: 100vh;
+}
+.container {
+    width: 100%;  
+}
+
+.cabecalho { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+    border: none;
+}
+
+.player {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+nav {
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 10px;
+}
+}
+
+/*Mobile 768px
+***************************/
+
+@media (max-width: 768px) {
+
+    body {
+        height: 100vh;
+    }
     .container {
-        width: 100%;
-        align-items: center;
+        width: 100%;  
     }
-
-    header {
-        border-bottom: none;
-    }
-
+    
     .cabecalho { 
         display: flex;
         flex-direction: row;
@@ -135,47 +173,27 @@ footer p {
         justify-content: center;
         gap: 15px;
         margin-top: 5px;
-
+        border: none;
     }
-
-
+    
     .player {
-        display: none;        
-    } 
-    
-    main p {
-        text-align: center;
-        width: 100%;
-    }
-
-    footer {
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px){
-    .container{
-        width: 100%;
-        align-items: center;
+        display: none;
     }
     
-    header {
-        border-bottom: none;
-    }
-    .cabecalho { 
+    main {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 5px;
-
+        margin: 5px;
+        padding: 5px;
     }
-
-    .player {
-        display: none;        
+    
+    nav {
+        padding-right: 30px;
+        margin-bottom: 10px;
     }
-    footer {
-        margin: 0 auto;
+    
+    footer p {
+        font-size: 10px;
     }
-}
+    }
